@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "/GFEBS_Dummy_Data_033121.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "gfebs//"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "DelimitedTextSource",
@@ -48,9 +57,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Date",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 1
 								}
 							},
 							{
@@ -60,9 +69,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "HQ/PM",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 2
 								}
 							},
 							{
@@ -72,9 +81,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Funds Center",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 3
 								}
 							},
 							{
@@ -84,9 +93,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Fiscal Year",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 4
 								}
 							},
 							{
@@ -96,9 +105,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Fiscal Period",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 5
 								}
 							},
 							{
@@ -108,9 +117,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Fund",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 6
 								}
 							},
 							{
@@ -120,9 +129,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Funded Program",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 7
 								}
 							},
 							{
@@ -132,9 +141,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "WBS Element",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 8
 								}
 							},
 							{
@@ -144,9 +153,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "  Allocated  ",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 9
 								}
 							},
 							{
@@ -156,9 +165,9 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "  Actual  ",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "String",
+									"ordinal": 10
 								}
 							}
 						],
