@@ -1,0 +1,62 @@
+{
+	"name": "GFEBSSink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "HQ/PM",
+				"type": "String"
+			},
+			{
+				"name": "Funds Center",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal Year",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal Period",
+				"type": "String"
+			},
+			{
+				"name": "Fund",
+				"type": "String"
+			},
+			{
+				"name": "Funded Program",
+				"type": "String"
+			},
+			{
+				"name": "WBS Element",
+				"type": "String"
+			},
+			{
+				"name": "  Allocated  ",
+				"type": "String"
+			},
+			{
+				"name": "  Actual  ",
+				"type": "String"
+			}
+		]
+	}
+}

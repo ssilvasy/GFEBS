@@ -1,6 +1,188 @@
 {
 	"name": "GFEBSPipeline",
 	"properties": {
+		"activities": [
+			{
+				"name": "GFEBSCopy",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureFileStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".csv"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "HQ/PM",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "HQ/PM",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Funds Center",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Funds Center",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal Year",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fiscal Year",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal Period",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fiscal Period",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fund",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fund",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Funded Program",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Funded Program",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "WBS Element",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "WBS Element",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "  Allocated  ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "  Allocated  ",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "  Actual  ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "  Actual  ",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "GFEBSSource",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "GFEBSSink",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
 		"annotations": []
 	}
 }

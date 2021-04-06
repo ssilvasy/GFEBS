@@ -1,0 +1,63 @@
+{
+	"name": "GFEBSSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureFileStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureFileStorageLocation",
+				"fileName": "GFEBS_Dummy_Data_033121.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "HQ/PM",
+				"type": "String"
+			},
+			{
+				"name": "Funds Center",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal Year",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal Period",
+				"type": "String"
+			},
+			{
+				"name": "Fund",
+				"type": "String"
+			},
+			{
+				"name": "Funded Program",
+				"type": "String"
+			},
+			{
+				"name": "WBS Element",
+				"type": "String"
+			},
+			{
+				"name": "  Allocated  ",
+				"type": "String"
+			},
+			{
+				"name": "  Actual  ",
+				"type": "String"
+			}
+		]
+	}
+}
